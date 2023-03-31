@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Digital Clock Assignment</title>
+    <style>
+    .clock{ 
+        justify-content: center;
+        align-items: center;
+        display: flex;
+  flex-direction: column;
+  text-align: center;
+    }
+.format{
+    justify-content: center;
+        align-items: center;
+        display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.format button{
+    d
+}
+    </style>
+
+  </head>
+  <body>
+ <script></script>
+<br>
+<br>
+<br>
+<br>
+ <div class="clock" data-format='12'>
+    <h1>00 : 00 : 00 AM</h1>
+  </div>
+  <div class="format">
+
+   
+    <button data-format='12'>12hours</button>
+    <button data-format='24'>24hours</button>
+  </div>
+
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
+</body>
+</html>
+ 
